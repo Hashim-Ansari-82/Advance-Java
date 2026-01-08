@@ -42,7 +42,7 @@ public class CrudOperation {
 
 	public static void createTable() throws SQLException {
 		String tablename = "create table "+tableName+"(Rollno int Primary key,name varchar(50),C Varchar(50),Cplus varchar(50),Java Varchar(50),DBMS varchar(50))";
-		Connection con = DriverManager.getConnection(url1, username, pass);
+	Connection con = DriverManager.getConnection(url1, username, pass);
 		PreparedStatement ps = con.prepareStatement(tablename);
 		int executeUpdate = ps.executeUpdate();
 		if (executeUpdate == 0) {

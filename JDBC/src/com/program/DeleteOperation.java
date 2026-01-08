@@ -14,7 +14,7 @@ public class DeleteOperation {
 		String url="jdbc:mysql://localhost:3306/jdbc_db",pass="root",username="root";
 	
 		Connection con = DriverManager.getConnection(url,username,pass);
-		PreparedStatement ps = con.prepareStatement("delete from db where=?");
+		PreparedStatement ps = con.prepareStatement("delete from db where name=?");
          ps.setString(1,name);
          int executeUpdate = ps.executeUpdate();
          

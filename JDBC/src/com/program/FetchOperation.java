@@ -16,14 +16,14 @@ public class FetchOperation {
 		 PreparedStatement ps = con.prepareStatement(fetch);//?,?,?
 		 
 		 ResultSet rs = ps.executeQuery();
-		 System.out.println("Id -----------> Name ----------------> email -------------> gender -------> city");
+		 System.out.println("Id\tName\t\temail   \t\tGender \tcity\n");
 		 while(rs.next()) {
 			 int id=rs.getInt("id");
 			 String name=rs.getString("name");
 			 String email=rs.getString("email");
 			 String gender=rs.getString("gender");
 			 String city=rs.getString("city");
-			 System.out.println(id+" ------> "+name+" ------->"+email+" ------>"+gender+" ------->"+city);
+			 System.out.println(id+"\t"+name+"\t"+email+"\t"+gender+"\t"+city+"\n");
 			
 		 }
 		 con.close();
